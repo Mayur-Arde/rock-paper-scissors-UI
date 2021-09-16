@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
-
+:root{
+  /* ### Neutral */
+--darkText: hsl(229, 25%, 31%);
+--scoreText: hsl(229, 64%, 46%);
+--headerOutline: hsl(217, 16%, 45%);
+}
 
 * , *::after , *::before{
   box-sizing: border-box;
@@ -10,3 +16,12 @@
 html {
   font-size: 16px;
 }
+
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+/* attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
