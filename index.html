@@ -15,47 +15,84 @@
 </head>
 
 <body>
-<div class="wrapper-container">
-  <header class="header">
-    <img src="./images/logo.svg" alt="game-logo">
-    <div class="score-wrapper">
-      <div class="score-container">
-      <h4>Your Score</h4>
-      <p class="your_score">0</p>
+  <div class="container">
+    <header class="header">
+      <img class="logo-img" src="images/logo.svg" alt="logo">
+      <div class="score-wrapper">
+        <div class="score-container">
+          <h4>Your score</h4>
+          <p id="my-score">0</p>
+        </div>
+        <div class="score-container">
+          <h4>Computer score</h4>
+          <p id="computer-score">0</p>
+        </div>
       </div>
-      <div class="score-container">
-      <h4>Computer Score</h4>
-      <p class="computer_score">0</p>
-      </div>
+
+    </header>
+
+    <main id="main">
+      <button class="btn-circle btn-paper pick" type="button" name="button"  data-choice="paper">
+        <span class="wrapper">
+          <img src="images/icon-paper.svg" alt="paper icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-scissors pick" type="button" name="button" data-choice="scissors">
+        <span class="wrapper">
+          <img src="images/icon-scissors.svg" alt="scissors icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-rock pick" type="button" name="button" data-choice="rock">
+        <span class="wrapper">
+          <img src="images/icon-rock.svg" alt="rock icon">
+        </span>
+      </button>
+    </main>
+
+    <button id="open" class="btn-rules" type="button" name="button">Rules</button>
+    <div class="rules-modal" id="modal">
+      <img src="images/image-rules.svg" alt="rules">
+      <button id="close" type="button" name="button">
+        <img src="images/icon-close.svg" alt="close">
+      </button>
     </div>
-  </header>
+    <div class="rules-container"></div>
 
-  <main class="main">
-    <button class="btn-circle btn-paper">
-      <span class="wrapper">
-        <img src="./images/icon-paper.svg" alt="icon-paper">
-      </span>
-    </button>
-    <button class="btn-circle btn-scissors">
-      <span class="wrapper">
-        <img src="./images/icon-scissors.svg" alt="icon-scissors">
-      </span>
-    </button>
-    <button class="btn-circle btn-rock">
-      <span class="wrapper">
-        <img src="./images/icon-rock.svg" alt="icon-paper">
-      </span>
-    </button>
-  </main>
+  </div>
 
-  <button class="btn-rules">Rules</button>
-</div>
+  <div class="selection" id="selection">
+    <div>
+      <h2>You picked</h2>
+      <button class="btn-circle btn-paper" id="user-select" type="button" name="button">
+        <span class="wrapper">
+          <img src="images/icon-paper.svg" alt="paper icon">
+        </span>
+      </button>
+    </div>
 
+    <div class="result-text">
+      <h1>You <span id="win">win</span></h1>
+      <button class="btn-reset" id="reset" type="button" name="button">play again</button>
+    </div>
 
+    <div>
+      <h2>Computer picked</h2>
+      <button class="btn-circle btn-rock" id="computer-select" type="button" name="button">
+        <span class="wrapper">
+          <img src="images/icon-rock.svg" alt="rock icon">
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="restart">
+    <button class="btn-restart" id="btn-restart">restart</button>
+  </div>
   <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/abidou08/" target="_blank">ABIDOU</a>.
+    </div> -->
   <script src="./scripts/script.js"></script>
 </body>
 
