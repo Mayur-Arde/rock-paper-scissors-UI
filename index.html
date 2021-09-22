@@ -17,7 +17,7 @@
 <body>
   <div class="container">
     <header class="header">
-      <img class="logo-img" src="images/logo.svg" alt="logo">
+      <img class="logo-img" src="/images/logo-bonus.svg" alt="logo">
       <div class="score-wrapper">
         <div class="score-container">
           <h4>Your score</h4>
@@ -32,42 +32,54 @@
     </header>
 
     <main id="main">
-      <button class="btn-circle btn-paper pick" type="button" name="button"  data-choice="paper">
+      <button class="btn-circle btn-scissors pick" type="button" name="button" data-choice="scissors">
         <span class="wrapper">
-          <img src="images/icon-paper.svg" alt="paper icon">
+          <img src="images/icon-scissors.svg" alt="scissors icon" class="icons">
         </span>
       </button>
 
-      <button class="btn-circle btn-scissors pick" type="button" name="button" data-choice="scissors">
+      <button class="btn-circle btn-paper pick" type="button" name="button"  data-choice="paper">
         <span class="wrapper">
-          <img src="images/icon-scissors.svg" alt="scissors icon">
+          <img src="images/icon-paper.svg" alt="paper icon" class="icons">
         </span>
       </button>
 
       <button class="btn-circle btn-rock pick" type="button" name="button" data-choice="rock">
         <span class="wrapper">
-          <img src="images/icon-rock.svg" alt="rock icon">
+          <img src="images/icon-rock.svg" alt="rock icon" class="icons">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-lizard pick" type="button" name="button" data-choice="lizard">
+        <span class="wrapper">
+          <img src="images/icon-lizard.svg" alt="icon-lizard" class="icons">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-spock pick" type="button" name="button" data-choice="spock">
+        <span class="wrapper">
+          <img src="images/icon-spock.svg" alt="icon-spock" class="icons">
         </span>
       </button>
     </main>
 
     <button id="open" class="btn-rules" type="button" name="button">Rules</button>
     <div class="rules-modal" id="modal">
-      <img src="images/image-rules.svg" alt="rules">
       <button id="close" type="button" name="button">
         <img src="images/icon-close.svg" alt="close">
       </button>
+      <img src="images/image-rules-bonus.svg" alt="rules">
     </div>
     <div class="rules-container"></div>
 
   </div>
 
   <div class="selection" id="selection">
-    <div>
+    <div class="user-result">
       <h2>You picked</h2>
       <button class="btn-circle btn-paper" id="user-select" type="button" name="button">
         <span class="wrapper">
-          <img src="images/icon-paper.svg" alt="paper icon">
+          <img src="images/icon-paper.svg" alt="paper icon" class="icons">
         </span>
       </button>
     </div>
@@ -77,11 +89,11 @@
       <button class="btn-reset" id="reset" type="button" name="button">play again</button>
     </div>
 
-    <div>
+    <div class="com-result">
       <h2>Computer picked</h2>
       <button class="btn-circle btn-rock" id="computer-select" type="button" name="button">
         <span class="wrapper">
-          <img src="images/icon-rock.svg" alt="rock icon">
+          <img src="images/icon-rock.svg" alt="rock icon" class="icons">
         </span>
       </button>
     </div>

@@ -35,7 +35,7 @@ button:focus {
 }
 
 .container {
-  width: 800px;
+  width: 850px;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -83,33 +83,34 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 350px;
-  margin: 4rem auto 2rem;
+  height: auto;
+  margin: 8rem auto 2rem;
   position: relative;
-  width: 400px;
+  width: 100%;
+  gap: 1rem;
 }
 
-main::before {
-  background-image: url(../images/bg-triangle.svg);
+/* main::before {
+  background-image: url(../images/bg-pentagon.svg);
   background-repeat: no-repeat;
   background-size: cover;
   content: '';
   position: absolute;
-  top: 20%;
+  top: 5%;
   right: 15%;
-  height: 70%;
-  width: 70%;
+  height: 88%;
+  width: 82%;
   z-index: -1;
-}
+} */
 
 .btn-circle {
   border: none;
   border-radius: 50%;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  margin: 0 25px;
-  height: 150px;
-  width: 150px;
+  margin: 0 10px;
+  height: 130px;
+  width: 130px;
 }
 
 .pick:active {
@@ -127,8 +128,8 @@ main::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
 }
 
 .btn-paper {
@@ -137,6 +138,7 @@ main::before {
     hsl(230, 89%, 62%),
     hsl(230, 89%, 65%)
   );
+
 }
 
 .btn-scissors {
@@ -151,6 +153,13 @@ main::before {
   );
 }
 
+.btn-lizard{
+  background: linear-gradient(to bottom, hsl(261, 73%, 60%) , hsl(261, 72%, 63%));;
+}
+
+.btn-spock{
+  background: linear-gradient(to bottom, hsl(189, 59%, 53%) , hsl(189, 58%, 57%));;
+}
 .btn-rules {
   background: transparent;
   border: 1px solid #fff;
@@ -195,7 +204,7 @@ main::before {
 
 .selection .btn-circle {
   margin: 50px;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .btn-reset , .btn-restart {
@@ -244,8 +253,8 @@ main::before {
   top: 25%;
   left: 50%;
   transform: translate(-50%, 0);
-  height: 400px;
-  width: 375px;
+  height: 420px;
+  width: 370px;
   z-index: 2;
 }
 
@@ -253,9 +262,12 @@ main::before {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-top: 40px;
-  transform: scale(1.5);
+  display: inline;
+  float: right;
+  margin-bottom: 30px;
+  transform: scale(1.5); 
 }
+
 
 /* .attribution {
   text-align: center;
@@ -264,6 +276,14 @@ main::before {
 
 /* mobile view  */
 @media all and (max-width: 430px) {
+  body{
+    min-height: 96vh;
+  }
+
+  .icons{
+    width: 30px;
+  }
+  
   .logo-img {
     width: 120px;
   }
@@ -292,33 +312,43 @@ main::before {
   main {
     flex-wrap: wrap;
     justify-content: center;
-    height: 350px;
-    margin: 1.5rem auto;
+    height: 240px;
+    margin: 2rem auto;
     width: 370px;
+    gap: 0.7rem;
+  
   }
 
   .btn-circle {
-    margin: 0 20px;
-    height: 130px;
-    width: 130px;
+    margin: 0 5px;
+    height: 95px;
+    width:  95px;
   }
 
   .wrapper {
     display: inline-flex;
-    height: 110px;
-    width: 110px;
+    height: 80px;
+    width: 80px;
   }
+
 
   .selection{
     flex-wrap: wrap;
     justify-content: center;
     width: 500px;
-    gap: 2.3rem;
+    gap: 1.5rem;
     max-width: 100%;
     margin: 3rem auto 2.5rem;
     text-transform: uppercase;
   }
 
+  .user-result{
+    margin-right: 1rem;
+  }
+
+  .com-result{
+    margin-left: 1rem;
+  }
   .selection .btn-circle {
     margin: 5px;
     transform: scale(1);
@@ -326,5 +356,21 @@ main::before {
 
   .result-text{
     order: 1;
+  }
+
+  .rules-modal {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 420px;
+    width: 370px;
+    z-index: 2;
   }
 }
